@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="flex">
         <div class="nav-left flex">
-            <yt-icon id="logo-icon"><yt-icon-shape><icon-shape><div style="width: 100%; height: 100%; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 20" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
+            <button class="arrow-left"><i class="fa fa-arrow-left"></i></button>
+            <button class="menu-btn"><i class="fa fa-bars"></i></button>
+            <yt-icon id="logo-icon" class="logo-icon"><yt-icon-shape><icon-shape><div style="width: 100%; height: 100%; fill: currentcolor;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 20" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%;">
                 <svg viewBox="0 0 90 20" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                     <g>
                     <path d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z" fill="#FF0000"></path>
@@ -32,8 +35,8 @@
         </div>
         <div class="nav-middle flex">
             <div class="search-box flex">
-                <input type="search" placeholder="search">
-                <img src="images/search.png">
+                <input id="search" type="search" placeholder="search" autocomplete="off">
+                <img src="images/search.png" class="search-icon">
             </div>
             <img src="images/voice-search.png" class="mic-icon">
         </div>
@@ -44,10 +47,24 @@
             <img src="images/Jack.png" class="user-image">
         </div>
     </nav>
-
-    <div class="sidebar">
+    <div class="sidebar temp-sidebar">
+        <div class="shortcuts">
+            <a href=""><img src="images/home.png">
+                <p>Home</p>
+            </a>
+            <a href=""><img src="images/explore.png">
+                <p>Explore</p>
+            </a>
+            <a href=""><img src="images/subscriprion.png">
+                <p>Subscription</p>
+            </a>
+        </div>
+    </div>
+    <div class="sidebar hidden-sidebar">
         <div class="shortcut-links">
-            <a href=""><img src="images/home.png"><p>Home</p></a>
+            <a href=""><img src="images/home.png">
+                <p>Home</p>
+            </a>
             <a href=""><img src="images/explore.png">
                 <p>Explore</p>
             </a>
@@ -69,7 +86,124 @@
             <a href=""><img src="images/show-more.png">
                 <p>Show More</p>
             </a>
+            <hr>
+        </div>
+        <div class="subscribed-list">
+            <h4>Subscriptions</h4>
+            <a href=""><img src="images/Jack.png" alt="">
+                <p>Jack Nicholson</p>
+            </a>
+            <a href=""><img src="images/simon.png" alt="">
+                <p>Simon Baker</p>
+            </a>
+            <a href=""><img src="images/tom.png" alt="">
+                <p>Tom Hardy</p>
+            </a>
+            <a href=""><img src="images/megan.png" alt="">
+                <p>Megan Ryan</p>
+            </a>
+            <a href=""><img src="images/cameron.png" alt="">
+                <p>Cameron Diaz</p>
+            </a>
+        </div>
+        
+    </div>
+    <div class="blur"></div>
+    <div class="container video-container">
+            <div class="banner">
+                <img src="images/banner.jpg" class="banner">
+            </div>
+            <div class="list-container">
+                <div class="vid-list">
+                    <a href="playVideo.html"><img src="images/thumbnail1.png" class="thumbnail"></a>               
+                    <div class="flex">
+                        <img src="images/Jack.png">  
+                        <div class="vid-info">
+                            <a href="playVideo.html">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail2.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail3.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail4.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail5.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail6.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail7.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="vid-list">
+                    <a href=""><img src="images/thumbnail8.png" class="thumbnail"></a>
+                    <div class="flex">
+                        <img src="images/Jack.png">
+                        <div class="vid-info">
+                            <a href="">Best channel to learn coding to help you become a web developer</a>
+                            <p>Easy Tutorials</p>
+                            <p>15k Views &bull; 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
