@@ -71,9 +71,19 @@ nav {
     width: 23px;
     margin-right: 20px;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+}
 #logo-icon{
-    width: 90px;
+    font-size: 28px;
     margin-left: 25px;
+    color: red;
+}
+.logo-name {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 3px;
 }
 
 .nav-middle .search-box {
