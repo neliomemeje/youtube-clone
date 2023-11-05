@@ -81,9 +81,11 @@ nav {
     color: red;
 }
 .logo-name {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 600;
     margin-left: 3px;
+    display: inline-block;
+    transform: scale(1,2);
 }
 
 .nav-middle .search-box {
@@ -292,7 +294,7 @@ nav {
 }
 
 .menu-btn.hide,
-.logo-icon.hide {
+.logo-container.hide {
     display: none;
 }
 .row {

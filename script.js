@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector(".menu-btn");
 const arrowLeft = document.querySelector(".arrow-left");
-const logoIcon = document.querySelector(".logo-icon");
+const logoIcon = document.querySelector(".logo-container");
 const sidebar = document.querySelector(".hidden-sidebar");
 const searchBox = document.querySelector(".search-box");
 const input = document.querySelector(".search-box input");
