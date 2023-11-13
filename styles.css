@@ -509,7 +509,7 @@ nav {
        display: none;
     }
     .nav-middle .search-box {
-        padding: 2px 5px;
+        padding: 5px 5px 3px 6px;
     }
     .shortcut-links a img {
         width: 20px;
